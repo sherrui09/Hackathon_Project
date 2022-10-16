@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Raleway", sans-serif;
+  --light: 300;
+  --normal: 400;
+  --bold: 500;
+  --extra-bold: 600;
+  --purple: "#8884d8";
+  --green: "#82ca9d";
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+span[contenteditable]:empty::before {
+  display: inline-block;
+  opacity: 0.5;
+  font-style: italic;
+  content: "news articles, reviews, mission statements, speeches, etc.";
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid black; /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.active-mode {
+  background-color: black;
+  color: white;
+}
